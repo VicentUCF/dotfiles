@@ -21,7 +21,7 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
         **base(fg, bg),
         fontsize=fontsize,
         text=text,
-        padding=3
+        padding=5
     )
 
 
@@ -30,7 +30,7 @@ def powerline(fg="light", bg="dark"):
         **base(fg, bg),
         text="", # Icon: nf-oct-triangle_left
         fontsize=37,
-        padding=-3
+        padding=-4
     )
 
 
@@ -67,12 +67,12 @@ def workspaces():
 primary_widgets = [
     *workspaces(),
 
-    # separator(),
+    separator(),
 
-    # powerline('color4', 'dark'),
+    powerline('color4','dark'),
 
-    # icon(bg="color4", text=' '), # Icon: nf-fa-download
-    # 
+    icon(bg="color4", text=''), # Icon: nf-fa-download
+    
     # widget.CheckUpdates(
     #     background=colors['color4'],
     #     colour_have_updates=colors['text'],
@@ -83,18 +83,19 @@ primary_widgets = [
     #     custom_command='checkupdates',
     # ),
 
+    widget.KeyboardLayout(**base(bg="color4"),configured_keyboards=['us','es'],padding=5),
 
-    powerline('color3', 'dark'),
+    powerline('color3', 'color4'),
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(interface='wlp9s0',**base(bg='color3')),
+    widget.Net(interface='enp8s0',**base(bg='color3'), padding=10),
 
     powerline('color5', 'color3'),
 
     icon(bg="color5",text=''),
      
-    widget.CPU(**base(bg='color5')),    
+    widget.CPU(**base(bg='color5'), padding=5),    
    
     powerline('color2', 'color5'), 
    
@@ -129,6 +130,9 @@ secondary_widgets = [
     widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
 
     powerline('dark', 'color2'),
+
+
+    
 ]
 
 widget_defaults = {

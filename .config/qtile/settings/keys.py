@@ -77,6 +77,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "p", lazy.spawn("intellij-idea-ultimate")),
   
 
+    ([mod], "space", lazy.widget["keyboardlayout"].next_keyboard()),
+
     # ------------ Hardware Configs ------------
 
     # Volume
