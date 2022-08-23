@@ -1,3 +1,20 @@
+#PowerLevel 10k installation
+#Have installed PoweLevel10k
+
+#git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+#Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+
+#Make zsh default shell
+#sudo chsh -s $(which zsh)
+
+#Install zsh-autoseggestion
+#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#plugins=(
+    # other plugins...
+   # zsh-autosuggestions
+#)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
